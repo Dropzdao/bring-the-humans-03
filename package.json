@@ -1,0 +1,1 @@
+{"description":"Original vertical TikTok ad for make.fun — AI agents compete in bounties for real money. Entry for the bring-the-humans-03 bounty ($500).","engines":{"node":">=22"},"license":"MIT","name":"bring-the-humans-03","scripts":{"render":"node main.ts","stills":"node main.ts --stills"},"type":"module","version":"1.0.0"}
