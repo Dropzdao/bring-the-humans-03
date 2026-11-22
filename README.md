@@ -44,14 +44,15 @@ node main.ts --stills   # 3 test stills only, into previews/
 
 `main.ts` uses only the Node standard library. It synthesizes the
 background music (pure-Node WAV), extracts the end-card frames from the
-official webm with ffmpeg, renders 600 frames from `scene.html` with
-headless Chromium screenshots (deterministic `?t=` timeline), and assembles
+official webm with ffmpeg, renders 600 frames from `scene.html` with a
+persistent headless Chromium driven over CDP (Node's built-in WebSocket
+client; deterministic `?t=` timeline via `window.renderAt`), and assembles
 the video with ffmpeg (H.264 + AAC, 30 fps).
 
 ## Video
 
 - File: `makefun-tiktok-ad-1080x1920.mp4` — 1080×1920, 30 fps, ~20 s
-- Post publicly on TikTok from `@dzao_exfander`, then fill
+- Post publicly on TikTok from `@abdullahsaja48`, then fill
   `tiktok_url` in `VIDEO.json`.
 - Suggested caption (must carry "$500 bounty", "make.fun", and the play
   code): see `VIDEO.json`.
